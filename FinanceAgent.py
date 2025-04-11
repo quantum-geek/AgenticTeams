@@ -1,4 +1,34 @@
 from phi.agent import Agent
+"""
+This script initializes a financial analysis agent using the Phi framework. The agent is configured to use the 
+OpenAI GPT-4 model and YFinanceTools for stock-related data analysis. The agent is designed to summarize and 
+compare analyst recommendations, stock fundamentals, and provide the latest stock prices for specified companies. 
+It also includes a decision-making feature to suggest whether to buy the stocks.
+Modules and Libraries:
+- `phi.agent`: Provides the `Agent` class for creating AI agents.
+- `phi.model.groq`: Contains the `Groq` model (commented out in this script).
+- `phi.tools.yfinance`: Includes tools for fetching stock-related data such as prices, fundamentals, and analyst recommendations.
+- `phi.model.openai`: Provides the `OpenAIChat` model for natural language processing.
+- `dotenv`: Used to load environment variables from a `.env` file.
+Key Features:
+1. **Agent Configuration**:
+    - Uses the `OpenAIChat` model (`gpt-4o`) for processing queries.
+    - Integrates `YFinanceTools` to fetch stock prices, analyst recommendations, and fundamentals.
+    - Displays tool calls and outputs in markdown format.
+    - Includes specific instructions for formatting responses, such as using tables with dotted lines and including company names.
+2. **Instructions for the Agent**:
+    - Use tables to display data.
+    - Retrieve company symbols using a function (commented out in this script) if not available.
+    - Ensure company names are included in the output.
+    - Use dotted lines to separate tables for better readability.
+3. **Agent Query**:
+    - Summarizes and compares analyst recommendations and fundamentals for TSLA, CRM, and NVDA stocks.
+    - Retrieves the latest stock prices for the specified stocks.
+    - Provides a "Yes" or "No" recommendation for buying each stock.
+Note:
+- The `get_company_symbol` function is defined but commented out. It maps company names to their symbols.
+- Debug mode is available but currently disabled.
+"""
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.model.openai import OpenAIChat
