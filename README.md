@@ -6,5 +6,6 @@ GROQ_API_KEY="Your API Key"
 OPENAI_API_KEY="Your API Key"
 
 
+To use Phidata, follow here: https://docs.phidata.com/agent-ui
 
 
